@@ -2,13 +2,24 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="/css/styles.css">
-    <script src="/scripts/index.js"></script>
 </head>
 <body>
     <div class="etch-a-sketch-body">
         <div class="heading">
             <p>Etch-A-Sketch</p>
         </div>
+        <div class="play-area">
+            <div class="drawing-board">
+            </div>
+            <div class="color-picker">
+                <label for="favColor">Select your favorite color:</label>
+                <input id="favColor" type="color" value="#ff0000">
+            </div>
+            <div class="reset">
+                <button onclick="window.location.reload()" class="reset-button">Reset</button>
+            </div>
+        </div>
     </div>
+    <script src="/scripts/index.js"></script>
 </body>
 </html>

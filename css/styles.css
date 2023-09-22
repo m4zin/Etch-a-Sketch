@@ -15,10 +15,12 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 20px;
 }
 
 .etch-a-sketch-body .heading {
-    margin-top: 40px;
+    margin-top: 20px;
+    margin-left: 20px;
 }
 
 .etch-a-sketch-body .heading p {
@@ -28,3 +30,39 @@ body {
     color: white;
 }
 
+.etch-a-sketch-body .play-area {
+    display: flex;
+    gap: 25px;
+}
+
+.etch-a-sketch-body .play-area .drawing-board {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 400px;
+    width: 402px;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+}
+
+.etch-a-sketch-body .play-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.etch-a-sketch-body .play-area .color-picker {
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+}
+
+.etch-a-sketch-body .play-area .reset button {
+    padding: 5px 10px;
+    background-color: darkgrey;
+    font-size: large;
+    border-radius: 25px;
+}
