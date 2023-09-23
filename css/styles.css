@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Handjet:wght@500&family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@500&family=Inconsolata&family=Indie+Flower&display=swap');
 
 * {
     margin: 0;
@@ -18,6 +19,28 @@ body {
     gap: 20px;
 }
 
+@keyframes colorRotate {
+    from {
+        color: #6666ff;
+    }
+
+    10% {
+        color: #0099ff;
+    }
+
+    50% {
+        color: #00ff00;
+    }
+
+    75% {
+        color: #ff3399;
+    }
+
+    100% {
+        color: #6666ff;
+    }
+}
+
 .etch-a-sketch-body .heading {
     margin-top: 20px;
     margin-left: 20px;
@@ -28,14 +51,19 @@ body {
     font-size: 50px;
     font-weight: bold;
     color: white;
+    text-align: center;
+    text-decoration: underline;
+    letter-spacing: 5px;
+    animation: colorRotate 2s linear 0s infinite;
+    text-decoration: none;
 }
 
-.etch-a-sketch-body .play-area {
+.etch-a-sketch-body {
     display: flex;
     gap: 25px;
 }
 
-.etch-a-sketch-body .play-area .drawing-board {
+.etch-a-sketch-body .drawing-board {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -46,23 +74,56 @@ body {
     justify-content: center;
 }
 
-.etch-a-sketch-body .play-area {
+.etch-a-sketch-body .input-size-and-color {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     gap: 20px;
 }
 
-.etch-a-sketch-body .play-area .color-picker {
+.etch-a-sketch-body .input-size-and-color .color,
+.etch-a-sketch-body .input-size-and-color .size {
+    display: flex;
+    gap: 10px;
     color: white;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 18px;
+    font-family: 'Inconsolata', monospace;
+    font-weight: bold;
+    font-size: 20px;
 }
 
-.etch-a-sketch-body .play-area .reset button {
-    padding: 5px 10px;
-    background-color: darkgrey;
-    font-size: large;
-    border-radius: 25px;
+.etch-a-sketch-body .input-size-and-color .color p,
+.etch-a-sketch-body .input-size-and-color .size p {
+    margin-top: 5px;
 }
+
+.etch-a-sketch-body .size .size-btn,
+.etch-a-sketch-body .reset-button {
+    display: inline-block;
+    outline: 0;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 4px;
+    font-size: 13px;
+    height: 30px;
+    background-color: white;
+    color: #0e0e10;
+    padding: 0 10px;
+}
+
+.etch-a-sketch-body .reset-button {
+    display: inline-block;
+    outline: 0;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 4px;
+    font-size: 13px;
+    height: 30px;
+    background-color: red;
+    color: white;
+    padding: 0 10px;
+}
+
+

@@ -2,24 +2,30 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="/css/styles.css">
+    <script src="/scripts/index.js" defer></script>
 </head>
 <body>
     <div class="etch-a-sketch-body">
+
         <div class="heading">
             <p>Etch-A-Sketch</p>
         </div>
-        <div class="play-area">
-            <div class="drawing-board">
+
+        <div class="input-size-and-color">
+            <div class="color">
+                <p>Pick a color: </p>
+                <input type="color" name="favColor" id="favColor">
             </div>
-            <div class="color-picker">
-                <label for="favColor">Select your favorite color:</label>
-                <input id="favColor" type="color" value="#ff0000">
-            </div>
-            <div class="reset">
-                <button onclick="window.location.reload()" class="reset-button">Reset</button>
+            <div class="size">
+                <p>Enter size of grid (1-64 only): </p>
+                <input type="text" name="size" id="size" size="8">
+                <button class="size-btn">submit</button>
+                <p class="error-log"></p>
             </div>
         </div>
+
+        <div class="drawing-board"></div>  
+        <button class="reset-button">Reset</button>     
     </div>
-    <script src="/scripts/index.js"></script>
 </body>
 </html>
