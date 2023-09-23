@@ -76,7 +76,7 @@ body {
 
 .etch-a-sketch-body .input-size-and-color {
     display: flex;
-    width: 500px;
+    min-width: 700px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
